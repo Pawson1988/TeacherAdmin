@@ -1,0 +1,21 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.nav {
+    background: linear-gradient(rgb(180, 214, 248), rgb(114, 206, 230));
+    padding: 7px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.25rem !important;
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+}
+
+.icon {
+    padding: 7px;
+    margin-left: 18px;
+}

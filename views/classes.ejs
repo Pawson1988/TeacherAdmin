@@ -1,0 +1,244 @@
+    <% layout('boilerplate') -%>
+    <div class="row container-div">
+    <div class="col-lg-5 class-outer-container">
+
+        <h1>MONDAY</h1>
+        <% for(let class1 of classes){ %>
+            <% if(class1.day === "Monday"){ %>
+            <div class="class-container mb-3 container">
+
+                <div class="info-div">
+                    <p class="info-item"><strong>Student's Name:</strong> <%= class1.student %></p>
+                    <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
+                    <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
+                    <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
+                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                </div>
+                <div class="buttons">
+                    <div class="edit-iniciate mb-3">
+                        <form action="/classes/<%- class1._id %>/edit" method="GET">
+                        <button class="start-edit-btn btn btn-success mr-3">Edit</button>
+                    </form>
+
+                    </div>
+                    <div class="delete-button">
+                        <form action="/classes/<%- class1._id %>/delete?_method=DELETE" method="POST">
+                            <button class="delete-btn btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <% } %>
+        <% } %>
+            <h1>TUESDAY</h1>
+        <% for(let class1 of classes){ %>
+            <% if(class1.day === "Tuesday"){ %>
+            <div class="class-container mb-3 container">
+
+                <div class="info-div">
+                    <p class="info-item"><strong>Student's Name:</strong> <%= class1.student %></p>
+                    <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
+                    <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
+                    <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
+                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                </div>
+                <div class="buttons">
+                    <div class="edit-iniciate mb-3">
+                        <form action="/classes/<%- class1._id %>/edit" method="GET">
+                        <button class="start-edit-btn btn btn-success">Edit</button>
+                    </form>
+
+                    </div>
+                    <div class="delete-button">
+                        <form action="/classes/<%- class1._id %>/delete?_method=DELETE" method="POST">
+                            <button class="delete-btn btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <% } %>
+        <% } %>
+            <h1>WEDNESDAY</h1>
+        <% for(let class1 of classes){ %>
+            <% if(class1.day === "Wednesday"){ %>
+            <div class="class-container mb-3 container">
+
+                <div class="info-div">
+                    <p class="info-item"><strong>Student's Name:</strong> <%= class1.student %></p>
+                    <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
+                    <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
+                    <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
+                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                </div>
+                <div class="buttons">
+                    <div class="edit-iniciate mb-3">
+                        <form action="/classes/<%- class1._id %>/edit" method="GET">
+                        <button class="start-edit-btn btn btn-success">Edit</button>
+                    </form>
+
+                    </div>
+                    <div class="delete-button">
+                        <form action="/classes/<%- class1._id %>/delete?_method=DELETE" method="POST">
+                            <button class="delete-btn btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <% } %>
+        <% } %>
+            <h1>THURSDAY</h1>
+        <% for(let class1 of classes){ %>
+            <% if(class1.day === "Thursday"){ %>
+            <div class="class-container mb-3 container">
+
+                <div class="info-div">
+                    <p class="info-item"><strong>Student's Name:</strong> <%= class1.student %></p>
+                    <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
+                    <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
+                    <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
+                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                </div>
+                <div class="buttons">
+                    <div class="edit-iniciate mb-3">
+                        <form action="/classes/<%- class1._id %>/edit" method="GET">
+                        <button class="start-edit-btn btn btn-success">Edit</button>
+                    </form>
+
+                    </div>
+                    <div class="delete-button">
+                        <form action="/classes/<%- class1._id %>/delete?_method=DELETE" method="POST">
+                            <button class="delete-btn btn btn-danger">Delete</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            
+            <% } %>
+        <% } %>
+            <h1>FRIDAY</h1>
+        <% for(let class1 of classes){ %>
+            <% if(class1.day === "Friday"){ %>
+            <div class="class-container mb-3 container">
+
+                <div class="info-div">
+                    <p class="info-item"><strong>Student's Name:</strong> <%= class1.student %></p>
+                    <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
+                    <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
+                    <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
+                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                </div>
+            <div class="buttons">
+                <div class="edit-iniciate mb-3">
+                    <form action="/classes/<%- class1._id %>/edit" method="GET">
+                    <button class="start-edit-btn btn btn-success">Edit</button>
+                </form>
+
+                </div>
+                <div class="delete-button">
+                    <form action="/classes/<%- class1._id %>/delete?_method=DELETE" method="POST">
+                        <button class="delete-btn btn btn-danger">Delete</button>
+                    </form>
+                </div>
+            </div>
+            </div>
+            
+            <% } %>
+        <% } %>
+   </div>
+   <div class="col-lg-5">
+
+            <div class="add-a-class-div">
+
+                <h1>ADD A CLASS</h1>
+
+                <form action="/classes/add" method="post">
+                    <div class="form-group">
+                        <label for="student">Student's Name</label>
+                        <input class="form-control" type="text" name="student" id="student" placeholder="Student">
+                    </div>
+                    <div class="form-group">
+                        <label for="days">Choose a day:</label>
+                        <select class="form-control" id="days" name="days">
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        </select> 
+                    </div>
+                    <div class="form-group">
+                        <label for="startTime">Start Time</label>
+                        <input class="form-control" type="time" name="startTime" id="startTime" placeholder="Start Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="endTime">Finish Time</label>
+                        <input class="form-control" type="time" name="endTime" id="endTime" placeholder="End Time">
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price per Hour</label>
+                        <input class="form-control" type="number" name="price" id="price" placeholder="Price">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="duration">Duration</label>
+                        <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1">
+                    </div>
+
+                    <button class="btn btn-success">Submit</button>
+                </form>
+            </div>     
+    
+            <div class="edit-class-div">
+                <h1 style="display: inline">EDIT CLASS</h1>
+                    <button style="display: inline; margin-bottom: 1.2rem; margin-left: 1rem;" class="btn btn-success add-class-from-edit-btn">Add a class</button>
+
+                    <p style="color: rgb(223, 75, 65);">You are editing <%- classA.student %>'s class</p>
+
+                <form action="/classes/<%- classA._id %>?_method=PUT" method="POST">
+                <div class="form-group">
+                    <label for="student">Student's Name</label>
+                    <input class="form-control" type="text" name="student" id="student" placeholder="Student" value="<%- classA.student %>">
+                </div>
+                <div class="form-group">
+                    <label for="days">Choose a day:</label>
+                    <select class="form-control" id="days" name="days" value="<%- classA.day %>" selected="<%- classA.day %>">
+                    <option value="Monday">Monday</option>
+                    <option value="Tuesday">Tuesday</option>
+                    <option value="Wednesday">Wednesday</option>
+                    <option value="Thursday">Thursday</option>
+                    <option value="Friday">Friday</option>
+                    </select> 
+                </div>
+                <div class="form-group">
+                    <label for="startTime">Start Time</label>
+                    <input class="form-control" type="time" name="startTime" id="startTime" placeholder="Start Time" value="<%- classA.startTime %>">
+                </div>
+                <div class="form-group">
+                    <label for="endTime">Finish Time</label>
+                    <input class="form-control" type="time" name="endTime" id="endTime" placeholder="End Time" value="<%- classA.endTime %>">
+                </div>
+                <div class="form-group">
+                    <label for="price">Price per Hour</label>
+                    <input class="form-control" type="number" name="price" id="price" placeholder="Price" value="<%- classA.price %>">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="duration">Duration</label>
+                    <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1" value="<%- classA.duration %>">
+                </div>
+
+                <button class="btn btn-success mb-3">Edit</button>
+                
+                </form>
+            
+        </div>
+
+    </div>
+</div>
+
