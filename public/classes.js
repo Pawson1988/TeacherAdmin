@@ -1,7 +1,24 @@
-editClassDiv = document.querySelector(".edit-class-div");
-startEditBtn = document.querySelectorAll(".start-edit-btn");
-addClassDiv = document.querySelector(".add-a-class-div");
-addClassFromEditBtn = document.querySelector(".add-class-from-edit-btn");
+const editClassDiv = document.querySelector(".edit-class-div");
+const startEditBtn = document.querySelectorAll(".start-edit-btn");
+const addClassDiv = document.querySelector(".add-a-class-div");
+const addClassFromEditBtn = document.querySelector(".add-class-from-edit-btn");
+const activateDeleteBtn = document.querySelector(".activate-delete");
+const deleteBtn = document.querySelectorAll(".delete-button");
+
+
+
+activateDeleteBtn.addEventListener("click", () => {
+    for(let i = 0; i < deleteBtn.length; i++){
+        if(deleteBtn[i].style.display === "none"){
+            deleteBtn[i].style.display = "block";
+        } else {
+            deleteBtn[i].style.display = "none";
+        }
+}})
+
+
+
+    
 
 for(let event of startEditBtn){
     event.addEventListener("click", () => {

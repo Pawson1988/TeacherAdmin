@@ -13,6 +13,17 @@
 .nav-links {
     display: flex;
     flex-direction: row;
+    list-style: none;
+}
+
+.nav-link > * {
+    text-decoration: none;
+    color: black;
+}
+
+.nav-link > *:hover {
+    color: white;
+    border-bottom:2px solid rgb(38, 211, 38);
 }
 
 .icon {

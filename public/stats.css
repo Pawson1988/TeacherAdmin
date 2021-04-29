@@ -1,0 +1,27 @@
+.info-box {
+    margin-right: 1.25rem;
+    border-radius: 5px;
+    display: flex;  
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background:linear-gradient(to right, rgb(244, 244, 245), 85%, rgb(241, 176, 225)) ; 
+    box-shadow:4px 4px 15px rgb(175, 175, 175);
+    font-size: 0.75rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    color:rgb(18, 115, 139);
+}
+
+.info-boxes-container {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    padding-left: 1.5rem !important;
+}
+
+.info-box-content {
+    font-size: 4rem;
+    padding: 9px;
+}

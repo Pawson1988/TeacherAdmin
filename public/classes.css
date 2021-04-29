@@ -3,6 +3,18 @@
     justify-content: center;
 }
 
+.activate-delete-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.activate-delete {
+    height: 2.5rem;
+    margin-top: 0.4rem;
+    margin-right: 1.2rem;
+}
+
 .class-container {
     margin-right: 1.25rem;
     border-radius: 5px;
@@ -10,7 +22,7 @@
     flex-direction: row;
     justify-content: center;
     padding: 0.5rem;
-    background: white; /*linear-gradient(rgb(192, 192, 192), 85%, rgb(131, 130, 130));*/
+    background: linear-gradient(to right,rgb(253, 253, 253), 90%, rgb(114, 206, 230)); 
     box-shadow:4px 4px 15px rgb(175, 175, 175);
     font-size: 0.75rem;
 }

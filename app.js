@@ -85,3 +85,8 @@ app.put("/classes/:id", async(req, res) => {
     await privateClass.findByIdAndUpdate(id, updatedClass);
     res.redirect("/");
 });
+
+app.get("/stats", async(req, res) => {
+    const classes = await privateClass.find({});
+    res.render("stats", { classes });
+})

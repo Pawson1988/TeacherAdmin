@@ -2,7 +2,11 @@
     <div class="row container-div">
     <div class="col-lg-5 class-outer-container">
 
-        <h1>MONDAY</h1>
+        <div class="activate-delete-div">
+            <h1>MONDAY</h1>
+            <button class="btn btn-danger activate-delete">Delete</button>
+        </div>
+
         <% for(let class1 of classes){ %>
             <% if(class1.day === "Monday"){ %>
             <div class="class-container mb-3 container">
