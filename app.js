@@ -8,6 +8,7 @@ const dotenvConfig = dotenv.config();
 const privateClass = require("./models/classesModel");
 const ejsMate = require("ejs-mate");
 const methodOverride = require("method-override");
+const { find } = require("./models/classesModel");
 
 //Database connection
 mongoose.connect(`mongodb+srv://${process.env.MONGO_ATLAS_USERNAME}:${process.env.MONGO_ATLAS_PASSWORD}@cluster0.3wcla.mongodb.net/ProjectYelpCamp?retryWrites=true&w=majority`, { 
@@ -37,13 +38,27 @@ app.get("/", (req, res) => {
 });
 
 app.get("/classes", async(req, res) => {
-    const classes = await privateClass.find({}).sort({ "startTime": 1});
-    const classA = await privateClass.findOne({});
+    const classes = await privateClass.find({}, (err, doc) => {
+        if (err){
+            console.log(err);
+        } else {
+        return doc;
+    }}).sort({ startTime: 1});
+
+    const classA = {
+        student: "New Student",
+        day: "New Day",
+        startTime: "00:00",
+        endTime: "00:00",
+        price: 0,
+        duration: 0
+    };
+
     res.render("classes", { classes, classA });
 });
 
 
-app.post("/classes/add", (req, res) => {
+app.post("/classes/add", async(req, res) => {
     const { days, student, startTime, endTime, price, duration } = req.body;
     const classInfo = new privateClass({
         student: student,
@@ -53,21 +68,39 @@ app.post("/classes/add", (req, res) => {
         price: price, 
         duration: duration
     });
-    classInfo.save();
+    await classInfo.save();
     res.redirect("/classes");
 });
 
 app.delete("/classes/:id/delete", async(req, res) => {
     const {id} = req.params;
-    const indClass = await privateClass.findByIdAndDelete(id)
+    const indClass = await privateClass.findByIdAndDelete(id, (err, doc) => {
+        if(err){
+            console.log(err)
+        } else {
+            return doc;
+        }
+    })
     console.log(indClass);
     res.redirect("/classes")
 });
 
 app.get("/classes/:id/edit", async(req, res) => {
     const { id } = req.params;
-    const classA = await privateClass.findById(id);
-    const classes = await privateClass.find({});
+    const classA = await privateClass.findById(id, (err, doc) => {
+        if (err) {
+            console.log(err);
+        } else {
+            return doc; 
+        }
+    });
+    const classes = await privateClass.find({}, (err, doc) => {
+        if (err) {
+            console.log(err);
+        } else {
+            return doc;
+        }
+    }).sort({ startTime: 1});
     res.render("classes", { classA, classes });
 });
 
@@ -82,11 +115,16 @@ app.put("/classes/:id", async(req, res) => {
         price: price,
         duration: duration
     };
+
     await privateClass.findByIdAndUpdate(id, updatedClass);
-    res.redirect("/");
+    res.redirect("/classes");
 });
 
 app.get("/stats", async(req, res) => {
-    const classes = await privateClass.find({});
+    const classes = await privateClass.find({}, (err, doc) => {
+        if(err){
+            console.log(err);
+        }
+    });
     res.render("stats", { classes });
 })
