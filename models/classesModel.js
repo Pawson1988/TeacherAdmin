@@ -7,7 +7,13 @@ const classSchema = new Schema({
     startTime: String,
     endTime: String,
     price: Number,
-    duration: String
+    duration: String,
+    email: String,
+    note: [{
+        noteTitle: String,
+        noteBody: String
+    }
+]
 })
 
 const classModel = mongoose.model("privateClass", classSchema)

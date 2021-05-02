@@ -9,6 +9,7 @@
 
         <% for(let class1 of classes){ %>
             <% if(class1.day === "Monday"){ %>
+        <a href="/class/<%- class1._id %>">
             <div class="class-container mb-3 container">
 
                 <div class="info-div">
@@ -16,8 +17,8 @@
                     <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
                     <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
                     <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
-                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
-                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                    <!-- <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p>  -->
                 </div>
                 <div class="buttons">
                     <div class="edit-iniciate mb-3">
@@ -33,12 +34,14 @@
                     </div>
                 </div>
             </div>
+        </a>
             
             <% } %>
         <% } %>
             <h1>TUESDAY</h1>
         <% for(let class1 of classes){ %>
             <% if(class1.day === "Tuesday"){ %>
+        <a href="/class/<%- class1._id %>">
             <div class="class-container mb-3 container">
 
                 <div class="info-div">
@@ -46,8 +49,8 @@
                     <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
                     <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
                     <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
-                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
-                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                    <!-- <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p>  -->
                 </div>
                 <div class="buttons">
                     <div class="edit-iniciate mb-3">
@@ -63,12 +66,14 @@
                     </div>
                 </div>
             </div>
-            
+        </a>
+
             <% } %>
         <% } %>
             <h1>WEDNESDAY</h1>
         <% for(let class1 of classes){ %>
             <% if(class1.day === "Wednesday"){ %>
+        <a href="/class/<%- class1._id %>">
             <div class="class-container mb-3 container">
 
                 <div class="info-div">
@@ -76,8 +81,8 @@
                     <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
                     <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
                     <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
-                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
-                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                    <!-- <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p>  -->
                 </div>
                 <div class="buttons">
                     <div class="edit-iniciate mb-3">
@@ -93,12 +98,14 @@
                     </div>
                 </div>
             </div>
-            
+        </a>
+
             <% } %>
         <% } %>
             <h1>THURSDAY</h1>
         <% for(let class1 of classes){ %>
             <% if(class1.day === "Thursday"){ %>
+        <a href="/class/<%- class1._id %>">
             <div class="class-container mb-3 container">
 
                 <div class="info-div">
@@ -106,8 +113,8 @@
                     <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
                     <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
                     <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
-                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
-                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                    <!-- <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p>  -->
                 </div>
                 <div class="buttons">
                     <div class="edit-iniciate mb-3">
@@ -123,21 +130,23 @@
                     </div>
                 </div>
             </div>
-            
+        </a>
+
             <% } %>
         <% } %>
             <h1>FRIDAY</h1>
         <% for(let class1 of classes){ %>
             <% if(class1.day === "Friday"){ %>
-            <div class="class-container mb-3 container">
+            <a href="/class/<%- class1._id %>">
+                <div class="class-container mb-3 container">
 
                 <div class="info-div">
                     <p class="info-item"><strong>Student's Name:</strong> <%= class1.student %></p>
                     <p class="info-item"><strong>Day of the Class:</strong> <%= class1.day %></p>
                     <p class="info-item"><strong>Start Time:</strong> <%= class1.startTime %></p>
                     <p class="info-item"><strong>End Time:</strong> <%= class1.endTime %></p>
-                    <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
-                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p> 
+                    <!-- <p class="info-item"><strong>Price:</strong> <%= class1.price %></p>
+                    <p class="info-item"><strong>Duration:</strong> <%= class1.duration %></p>  -->
                 </div>
             <div class="buttons">
                 <div class="edit-iniciate mb-3">
@@ -153,6 +162,7 @@
                 </div>
             </div>
             </div>
+        </a>
             
             <% } %>
         <% } %>
@@ -190,9 +200,13 @@
                         <label for="price">Price per Hour</label>
                         <input class="form-control" type="number" name="price" id="price" placeholder="Price">
                     </div>
-                    <div class="form-group mb-3">
+                    <div class="form-group">
                         <label for="duration">Duration</label>
                         <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1">
+                    </div>
+                    <div class="form-group mb-3">
+                        <label for="email">Email Address</label>
+                        <input class="form-control" type="email" name="email" id="email" placeholder="Email"> 
                     </div>
 
                     <button class="btn btn-success">Submit</button>
@@ -232,9 +246,13 @@
                     <label for="price">Price per Hour</label>
                     <input class="form-control" type="number" name="price" id="price" placeholder="Price" value="<%- classA.price %>">
                 </div>
-                <div class="form-group mb-3">
+                <div class="form-group">
                     <label for="duration">Duration</label>
                     <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1" value="<%- classA.duration %>">
+                </div>
+                <div class="form-group mb-3">
+                    <label for="email">Email Address</label>
+                    <input class="form-control" type="email" name="email" id="email" placeholder="Email"> 
                 </div>
 
                 <button class="btn btn-success mb-3">Edit</button>

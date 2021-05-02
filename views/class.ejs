@@ -1,0 +1,59 @@
+<% layout ('boilerplate.ejs') -%>
+<div class="container">
+    <div class="container outer-ind-info-container">
+        <div class="inner-ind-info-container">
+
+            <h4>Name: <%- classInfo.student %></h4>
+            <h4>Day: <%- classInfo.day %></h4>
+            <h4>Start Time: <%- classInfo.startTime %></h4>
+            <h4>End Time: <%- classInfo.endTime %></h4>
+            <h4>Price: <%- classInfo.price %></h4>
+            <h4>Duration: <%- classInfo.duration %></h4>
+            <h4>Email Address: <%- classInfo.email %></h4> 
+            
+            <form action="/class/<%- classInfo._id %>/email" method="post">
+                <button class="btn btn-primary">Send Email</button>
+            </form>
+        </div>
+
+        <div class="class-notes">
+            <h3 class="note-form-header">Add a note to this class here</h3>
+                <div class="notes-form-container">
+                    <form action="/class/<%- classInfo._id %>/note" method="POST">
+                        <div class="mb-3 form-group">
+                            <p>Note Title: </p>
+                            <input class="form-control" type="text" name="noteTitle" id="noteTitle">
+                        </div>
+                        <div class="mb-3 form-group">
+                            <p>Note Body: </p>
+                            <textarea class="form-control" name="noteBody" id="noteBody" cols="20" rows="10"></textarea>
+                        </div>
+                        <button class="btn btn-success">Add Note</button>
+                    </form>
+                </div>
+        </div>
+    </div>
+
+
+
+    <div class="note-show-container mt-3">
+        <% for(let note of classInfo.note){ %>
+        <div>
+            <div class="note-title">
+            
+                <h5 class="mt-3"><strong>Note Title</strong></h5>
+                <p><%- note.noteTitle %></p>
+            </div>
+            <div class="note-body">
+                <h5><strong>Note Body</strong></h5>
+                <p><%- note.noteBody %></p>
+            </div>
+                <form class="delete-note-btn" action="/class/<%- note._id %>/<%- classInfo._id %>/delete?_method=DELETE" method="POST">
+                    <button class="btn btn-danger">Delete this note</button>
+                </form>
+            
+        </div>
+        <% } %>
+    </div>
+    
+</div>

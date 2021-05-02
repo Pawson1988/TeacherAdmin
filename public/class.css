@@ -1,0 +1,56 @@
+.outer-ind-info-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.outer-ind-info-container > * {
+    width: 100%;
+    background: linear-gradient(to left,rgb(253, 253, 253), 90%, rgb(114, 206, 230)); 
+    box-shadow:4px 4px 15px rgb(175, 175, 175);
+    padding: 1rem;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.outer-ind-info-container > :nth-child(1) {
+    margin-right: 1rem;
+    align-items: center;
+}
+
+.note-form-header {
+    display: flex;
+    justify-content: center;
+}
+
+.notes-form-container {
+    margin: 2rem 2rem;
+}
+
+.note-show-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(to left,rgb(253, 253, 253), 90%, rgb(114, 206, 230)); 
+    border-radius: 5px;
+    padding: 1rem;
+    width: 100%;
+    box-shadow:4px 4px 15px rgb(175, 175, 175);
+}
+
+.note-body > p {
+    overflow-wrap: normal;
+}
+
+.note-body > h5, .note-title > h5 {
+    border-left: 8px solid grey;
+    padding-left: 1rem;
+}
+
+.note-body > p, .note-title > p {
+    padding-left: 3rem;
+}
+
+.delete-note-btn {
+    padding-left: 3rem;
+}
