@@ -1,0 +1,21 @@
+.home-title-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.home-page-container {
+    background-image: url("/public/img/undraw_Add_notes_re_ln36.svg");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.home-title-div > h1 {
+    font-weight: 600;
+}

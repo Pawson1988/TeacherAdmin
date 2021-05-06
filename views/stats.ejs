@@ -16,7 +16,7 @@
                     <% } %>
 
                 <div class="info-box-content">
-                    <p>€<%- acc  %></p>
+                    <p>€<%- acc.toFixed(2)  %></p>
                 </div>
             </div>
 
@@ -67,7 +67,7 @@
                     <% for(let duration of classes){ %>
                         
                         <% acc = acc + parseFloat(duration.duration); %>
-                            <% console.log(acc); %>
+                          
                     <% } %>
 
                     <% acc = acc/classes.length %>
@@ -78,7 +78,7 @@
 
             <div class="info-box">
                 <div class="info-box-content">
-                    <h5> FOUR WEEK INCOME</h5>
+                    <h5> FOUR WEEKLY INCOME</h5>
                 </div>
                     <% acc = 0; %> 
 
@@ -88,7 +88,8 @@
                     
                     <% } %>
                 <div class="info-box-content">
-                    <p>€<%- acc * 4;  %></p>
+                    <% acc = acc * 4;  %>
+                    <p>€<%- acc.toFixed(2) %></p>
                 </div>
             </div>
 

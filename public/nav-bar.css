@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.25rem !important;
+    
 }
 
 .nav-links {
@@ -26,7 +27,3 @@
     border-bottom:2px solid rgb(38, 211, 38);
 }
 
-.icon {
-    padding: 7px;
-    margin-left: 18px;
-}
