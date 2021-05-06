@@ -17,9 +17,6 @@ activateDeleteBtn.addEventListener("click", () => {
 }})
 
 
-
-    
-
 for(let event of startEditBtn){
     event.addEventListener("click", () => {
         editClassDiv.style.display = "block";

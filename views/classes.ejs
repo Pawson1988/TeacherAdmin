@@ -176,11 +176,11 @@
                 <form action="/classes/add" method="post">
                     <div class="form-group">
                         <label for="student">Student's Name</label>
-                        <input class="form-control" type="text" name="student" id="student" placeholder="Student">
+                        <input class="form-control" type="text" name="student" id="student" placeholder="Student" required>
                     </div>
                     <div class="form-group">
                         <label for="days">Choose a day:</label>
-                        <select class="form-control" id="days" name="days">
+                        <select class="form-control" id="days" name="days" required>
                         <option value="Monday">Monday</option>
                         <option value="Tuesday">Tuesday</option>
                         <option value="Wednesday">Wednesday</option>
@@ -190,19 +190,19 @@
                     </div>
                     <div class="form-group">
                         <label for="startTime">Start Time</label>
-                        <input class="form-control" type="time" name="startTime" id="startTime" placeholder="Start Time">
+                        <input class="form-control" type="time" name="startTime" id="startTime" placeholder="Start Time" required>
                     </div>
                     <div class="form-group">
                         <label for="endTime">Finish Time</label>
-                        <input class="form-control" type="time" name="endTime" id="endTime" placeholder="End Time">
+                        <input class="form-control" type="time" name="endTime" id="endTime" placeholder="End Time" required>
                     </div>
                     <div class="form-group">
                         <label for="price">Price per Hour</label>
-                        <input class="form-control" type="number" name="price" id="price" placeholder="Price">
+                        <input class="form-control" type="number" name="price" id="price" placeholder="Price" step="0.5" required>
                     </div>
                     <div class="form-group">
                         <label for="duration">Duration</label>
-                        <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1">
+                        <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="email">Email Address</label>
@@ -222,11 +222,11 @@
                 <form action="/classes/<%- classA._id %>?_method=PUT" method="POST">
                 <div class="form-group">
                     <label for="student">Student's Name</label>
-                    <input class="form-control" type="text" name="student" id="student" placeholder="Student" value="<%- classA.student %>">
+                    <input class="form-control" type="text" name="student" id="student" placeholder="Student" value="<%- classA.student %>" required>
                 </div>
                 <div class="form-group">
                     <label for="days">Choose a day:</label>
-                    <select class="form-control" id="days" name="days" value="<%- classA.day %>" selected="<%- classA.day %>">
+                    <select class="form-control" id="days" name="days" value="<%- classA.day %>" selected="<%- classA.day %>" required>
                     <option value="Monday">Monday</option>
                     <option value="Tuesday">Tuesday</option>
                     <option value="Wednesday">Wednesday</option>
@@ -236,19 +236,19 @@
                 </div>
                 <div class="form-group">
                     <label for="startTime">Start Time</label>
-                    <input class="form-control" type="time" name="startTime" id="startTime" placeholder="Start Time" value="<%- classA.startTime %>">
+                    <input class="form-control" type="time" name="startTime" id="startTime" placeholder="Start Time" value="<%- classA.startTime %>" required>
                 </div>
                 <div class="form-group">
                     <label for="endTime">Finish Time</label>
-                    <input class="form-control" type="time" name="endTime" id="endTime" placeholder="End Time" value="<%- classA.endTime %>">
+                    <input class="form-control" type="time" name="endTime" id="endTime" placeholder="End Time" value="<%- classA.endTime %>" required>
                 </div>
                 <div class="form-group">
                     <label for="price">Price per Hour</label>
-                    <input class="form-control" type="number" name="price" id="price" placeholder="Price" value="<%- classA.price %>">
+                    <input class="form-control" type="number" name="price" id="price" placeholder="Price" value="<%- classA.price %>" required>
                 </div>
                 <div class="form-group">
                     <label for="duration">Duration</label>
-                    <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1" value="<%- classA.duration %>">
+                    <input class="form-control" type="number" name="duration" id="duration" placeholder="Duration" step="0.1" value="<%- classA.duration %>" required>
                 </div>
                 <div class="form-group mb-3">
                     <label for="email">Email Address</label>

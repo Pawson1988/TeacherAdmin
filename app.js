@@ -39,15 +39,10 @@ app.use(methodOverride("_method"));
 
 app.engine("ejs", ejsMate);
 
-
-
-
-
 //homepage route
 app.get("/", (req, res) => {
     res.render("home", { message: "This is the Home Page"});
 });
-
 
 //Routes
 

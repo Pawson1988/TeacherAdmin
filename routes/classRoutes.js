@@ -42,7 +42,7 @@ router.post("/:id/note", async(req, res) => {
     res.redirect(`/class/${id}`);
 })
 
-// delete comment from the current class route. 
+// delete note from the current class route. 
 router.delete("/:id/:classId/delete", async(req, res) => {
     const { id, classId } = req.params;
     await privateClass.findOneAndUpdate({ _id: classId }, {"$pull": { "note": {"_id": id}}}, err => {
@@ -58,15 +58,15 @@ router.delete("/:id/:classId/delete", async(req, res) => {
 router.post("/:id/email", async(req, res) => {
     
     const { id } = req.params;
+    const {emailTitle, emailBody} = req.body;
 
     const student = await privateClass.findById(id);
     
     const mailOptions = {
         from: "pawson1988@me.com",
         to: `${student.email}`,
-        subject: "Email from my code program!",
-        text: "Do you want thousands of emails?",
-        html: "<h1>This is a header<h1><br><p>This is just a paragraph</p>"
+        subject: `${emailTitle}`,
+        text: `${emailBody}`
     };
     
     transporter.sendMail(mailOptions, (err, info) => {

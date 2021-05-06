@@ -1,0 +1,9 @@
+User express router and clean up routes... DONE..
+Do the login 
+yearly figures
+Do home page ... DONE
+set up email system....DONE
+individual class page with more info....class plans, notes etc... DONE
+change notes from one-one to one-to-many... 
+Do validation on front-end and then back end using JOI
+

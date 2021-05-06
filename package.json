@@ -1,10 +1,11 @@
 {
   "name": "classessite",
   "version": "1.0.0",
-  "description": "An app for to organise my classes",
+  "description": "An app to organise my classes",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
   },
   "author": "James Pawson",
   "license": "ISC",

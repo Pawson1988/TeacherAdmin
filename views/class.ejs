@@ -11,9 +11,9 @@
             <h4><strong><%-"Duration".toUpperCase()%></strong></h4><h6><%- classInfo.duration %></h6>
             <h4><strong><%-"Email Address".toUpperCase()%></strong></h4><h6 class="mb-3"><%- classInfo.email %></h6>
             
-            <form class="mt-3" action="/class/<%- classInfo._id %>/email" method="post">
-                <button class="btn btn-primary">Send Email</button>
-            </form>
+            
+                <button class="email-pop-up-btn btn btn-primary">Send Email</button>
+            
         </div>
 
         <div class="class-notes">
@@ -22,11 +22,11 @@
                     <form action="/class/<%- classInfo._id %>/note" method="POST">
                         <div class="mb-3 form-group">
                             <p>Note Title: </p>
-                            <input class="form-control" type="text" name="noteTitle" id="noteTitle">
+                            <input class="form-control" type="text" name="noteTitle" id="noteTitle" required>
                         </div>
                         <div class="mb-3 form-group">
                             <p>Note Body: </p>
-                            <textarea class="form-control" name="noteBody" id="noteBody" cols="20" rows="10"></textarea>
+                            <textarea class="form-control" name="noteBody" id="noteBody" cols="20" rows="10" required></textarea>
                         </div>
                         <button class="btn btn-success">Add Note</button>
                     </form>
@@ -54,3 +54,20 @@
     </div>
     
 </div>
+
+<div class="email-pop-up">
+    <form action="/class/<%- classInfo._id %>/email" method="post">
+        <div class="mb-3 form-group">
+            <label for="email-title">Title</label>
+            <input class="form-control" type="text" name="emailTitle" id="email-title" placeholder="Email Title" required>
+        </div>
+        <div class="mb-3 form-group">
+            <label for="email-body">Message</label>
+            <textarea class="form-control" name="emailBody" id="email-body" cols="30" rows="10" placeholder="Type your message here" required></textarea>
+        </div>
+        <button class="btn btn-success">Submit</button>
+    </form>
+        <button class="mt-3 click-off-email-btn btn btn-success">Go Back</button>
+    
+</div>
+ 
