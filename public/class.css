@@ -71,4 +71,6 @@ h4 {
     transform: translate(-50%, -50%);
     padding: 2rem;
     display: none;
+    box-shadow: 0 0 10px rgb(153, 152, 152);
 }
+

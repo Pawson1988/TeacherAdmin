@@ -1,6 +1,6 @@
 User express router and clean up routes... DONE..
 Do the login 
-yearly figures
+yearly figures... DONE
 Do home page ... DONE
 set up email system....DONE
 individual class page with more info....class plans, notes etc... DONE
