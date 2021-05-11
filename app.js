@@ -13,6 +13,8 @@ const transporter = require("./utils/nodemailer-auth.js");
 const classesRoutes = require("./routes/classesRoutes");
 const classRoutes = require("./routes/classRoutes");
 const statsRoutes = require("./routes/statsRoutes");
+const documentsRoutes = require("./routes/documentsRoutes");
+const fs = require("fs");
 
 
 //Database connection
@@ -52,4 +54,5 @@ app.use("/class", classRoutes);
 
 app.use("/stats", statsRoutes);
 
+app.use("/documents", documentsRoutes);
 

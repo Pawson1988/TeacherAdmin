@@ -1,0 +1,17 @@
+<% layout('boilerplate') -%>
+
+
+
+<% for(let files of PDFFiles){ %>
+    <!-- declare another variable of file so that the path to put into the action attribute stays the same to retrieve the file. -->
+    <% let file = files.replace(/-/g, " "); %> 
+    <% file = file.replace(/.pdf/g, ""); %>
+    <% file = file.charAt(0).toUpperCase() + file.slice(1); %>
+    <% file = file + "."; %>
+        <div>
+            <form action="/documents/<%= files %>" method="POST">
+                <button class="btn"><%= file %></button>
+            </form>
+        </div>
+
+<% } %>
