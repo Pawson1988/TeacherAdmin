@@ -15,6 +15,7 @@ const classRoutes = require("./routes/classRoutes");
 const statsRoutes = require("./routes/statsRoutes");
 const documentsRoutes = require("./routes/documentsRoutes");
 const fs = require("fs");
+const globalMiddleware = require("./utils/globalMiddleware");
 
 
 //Database connection
@@ -41,12 +42,14 @@ app.use(methodOverride("_method"));
 
 app.engine("ejs", ejsMate);
 
+app.use(globalMiddleware);
+
 //homepage route
 app.get("/", (req, res) => {
-    res.render("home", { message: "This is the Home Page"});
+    res.render("jimmyenglish");
 });
 
-//Routes
+//Routes middleware
 
 app.use("/classes", classesRoutes);
 
@@ -55,4 +58,8 @@ app.use("/class", classRoutes);
 app.use("/stats", statsRoutes);
 
 app.use("/documents", documentsRoutes);
+
+app.get("*", (req, res) => {
+    res.send("Sorry, the page that you're looking for does not exist, checked that you typed the URL correctly or contact the systems administrator");
+})
 

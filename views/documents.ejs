@@ -1,5 +1,29 @@
 <% layout('boilerplate') -%>
 
+<style>
+    body {
+        box-sizing: border-box;
+    }
+
+    .indDocDiv > form > button {
+        padding: 0.5rem 0;
+        margin-left: 1rem;
+    }
+
+    .indDocDiv > form > button > div {
+        padding-bottom: 0.3rem;
+    }
+
+
+    .indDocDiv > form > button:hover {
+         background: linear-gradient(white, 80%, rgb(115, 183, 228));
+    }
+
+    .indDocDiv {
+        width: max-content;
+    }
+
+</style>
 
 
 <% for(let files of PDFFiles){ %>
@@ -8,9 +32,11 @@
     <% file = file.replace(/.pdf/g, ""); %>
     <% file = file.charAt(0).toUpperCase() + file.slice(1); %>
     <% file = file + "."; %>
-        <div>
-            <form action="/documents/<%= files %>" method="POST">
-                <button class="btn"><%= file %></button>
+        <div class="indDocDiv">
+            <form target="_blank" action="/documents/<%= files %>" method="POST">
+                <button class="btn">
+                    <div><%= file %></div>
+                </button>
             </form>
         </div>
 
